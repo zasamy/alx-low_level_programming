@@ -10,14 +10,14 @@
 
 int main(void)
 {
-	int d = 0;
+	char digit = 0;
 
-	while (d <= 9)
+	while (digit <= 9)
 {
-	putchar(d + '0');
-	d++;
+	putchar(digit + '0');
+	digit++;
 }
-putchar("\n");
+putchar('\n');
 
 return (0);
 }
