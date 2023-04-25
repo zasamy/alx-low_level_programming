@@ -3,10 +3,9 @@
 /**
  * main - entry point
  *
- * Description: computes the sum of all the multiples of 3 or 5
- *bellow 1024
+ * Description: computes the sum of all the multiples of 3 or 5 bellow 1024
  *
- * return: always (0)
+ * Return: always (0)
 */
 
 int main(void)
