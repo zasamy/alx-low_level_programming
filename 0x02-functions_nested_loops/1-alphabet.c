@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- * print alphabet using the _putchar function
+ * print_alphabet - print alphabet in lowercase.
+ *
+ *Return: Alwzys 0 (success)
  *
 */
 
