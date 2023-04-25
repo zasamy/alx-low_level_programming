@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_signe - Description if input number greater than zero,
+ * print_sign - Description if input number greater than zero,
  * iqual or less than zero
  *
  *@n: takes integer type input for function
@@ -9,7 +9,7 @@
  * Return: 1 if +, 0 if 0 and -1 if -
 */
 
-int print_signe(int n)
+int print_sign(int n)
 {
 	if (n > 0)
 	{
