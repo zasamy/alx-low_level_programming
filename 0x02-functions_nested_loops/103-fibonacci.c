@@ -15,7 +15,7 @@ int main(void)
 
 	while (1)
 	{
-		sum = i + j;
+		total_sum = i + j;
 		if (total_sum > 4000000)
 			break;
 		if ((total_sum % 2) == 0)
