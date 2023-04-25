@@ -14,12 +14,12 @@ void jack_bauer(void)
 	{
 		for (min = 0; min <= 59; min++)
 		{
-			-putchar((hr / 10) + 48);
-			-putchar((hr % 10) + 48);
-			-putchar(':');
-			-putchar((min / 10) + 48);
-			-putchar((min % 10) + 48);
-			-putchar('\n');
+			putchar((hr / 10) + 48);
+			putchar((hr % 10) + 48);
+			putchar(':');
+			putchar((min / 10) + 48);
+			putchar((min % 10) + 48);
+			putchar('\n');
 		}
 	}
 }
