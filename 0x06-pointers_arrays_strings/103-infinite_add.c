@@ -38,7 +38,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			s = n2[j] - 48;
 		else
 			s = 0;
-		r[k] = (f + s + d) % 10 + 10;
+		r[k] = (f + s + d) % 10 + 48;
 		d = (f + s + d) / 10;
 	}
 	if (d == 1)
