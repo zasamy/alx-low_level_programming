@@ -13,11 +13,11 @@ char *_strchr(char *s, char c)
 {
 	int i, j, l;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] < '\0'; i++)
 	{
-		l = i+1;
+		l = i;
 	}
-	for (j = 0; j <= l+1; j++)
+	for (j = 0; j <= l + 1; j++)
 	{
 		if (s[j] == c)
 		{
