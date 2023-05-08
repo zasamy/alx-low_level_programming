@@ -3,24 +3,24 @@
 /**
  * compare - compares two strings character by character.
  *
- * @x: first string to compare
- * @y: seconde string to compare
+ * @X: first string to compare
+ * @Y: seconde string to compare
  *
  * Return: 0 (success)
  */
 
-int compare(char *x, char *y)
+int compare(char *X, char *Y)
 {
-	while (*x && *y)
+	while (*X && *Y)
 	{
-		if (*x != *y)
+		if (*X != *Y)
 		{
 			return (0);
 		}
-		x++;
-		y++;
+		X++;
+		Y++;
 	}
-	return (*y == '\0');
+	return (*Y == '\0');
 }
 
 
@@ -45,5 +45,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 		haystack++;
 	}
-	return (0);
+	return (NULL);
 }
