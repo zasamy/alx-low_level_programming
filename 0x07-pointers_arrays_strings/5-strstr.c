@@ -1,30 +1,6 @@
 #include"main.h"
 
 /**
- * compare - compares two strings character by character.
- *
- * @X: first string to compare
- * @Y: seconde string to compare
- *
- * Return: 0 (success)
- */
-
-int compare(char *X, char *Y)
-{
-	while (*X && *Y)
-	{
-		if (*X != *Y)
-		{
-			return (0);
-		}
-		X++;
-		Y++;
-	}
-	return (*Y == '\0');
-}
-
-
-/**
  * *_strstr - locates a substring.
  *
  * @haystack: string to be scanned
@@ -37,13 +13,29 @@ int compare(char *X, char *Y)
 
 char *_strstr(char *haystack, char *needle)
 {
-	while (*haystack != '\0')
+	int i, j;
+
+	if (needle[0] == '\0')
 	{
-		if ((*haystack == *needle) && compare(haystack, needle))
-		{
-			return (haystack);
-		}
-		haystack++;
+		return (haystack);
 	}
-	return (NULL);
+	for (i = 0; haystack[i] != '\0'; i++)
+	{
+		if (haystack[i] == needle[0])
+		{
+			for (j = 0; needle[j] != '\0'; j++)
+			{
+				if (haystack[i + j] != needle[j])
+				{
+					break;
+				}
+			}
+			if (needle[j] == '\0')
+			{
+				return (haystack + i);
+			}
+		}
+	}
+	return (0);
 }
+
