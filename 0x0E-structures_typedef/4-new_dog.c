@@ -12,7 +12,7 @@ int _strlen(char *str)
 {
 	int length;
 
-	while (*(str + length) != '\0')
+	while (*str++)
 		length++;
 	return (length);
 }
@@ -44,30 +44,33 @@ char *_strcopy(char *dest, char *src)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
+	dog_t *dog;
 
 	if (name == NULL || age < 0 || owner == NULL)
 		return (NULL);
-	new_dog = (dog_t *) malloc(sizeof(dog_t));
-	if (new_dog == NULL)
+
+	dog = (dog_t *) malloc(sizeof(dog_t));
+	if (dog == NULL)
 		return (NULL);
-	new_dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if ((*new_dog).name == NULL)
+
+	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if ((*dog).name == NULL)
 	{
-		free(new_dog);
-		return (NULL);
-	}
-	new_dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if ((*new_dog).owner == NULL)
-	{
-		free(new_dog->name);
-		free(new_dog);
+		free(dog);
 		return (NULL);
 	}
 
-	new_dog->name = _strcopy(new_dog->name, name);
-	new_dog->age = age;
-	new_dog->owner = _strcopy(new_dog->owner, owner);
+	dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if ((*dog).owner == NULL)
+	{
+		free(dog->name);
+		free(dog);
+		return (NULL);
+	}
 
-	return (new_dog);
+	dog->name = _strcopy(dog->name, name);
+	dog->age = age;
+	dog->owner = _strcopy(dog->owner, owner);
+
+	return (dog);
 }
