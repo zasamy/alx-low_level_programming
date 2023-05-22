@@ -8,9 +8,9 @@
  * Return: the lentgh of str
  */
 
-int _strlen(char *str)
+int _strlen(const char *str)
 {
-	int length;
+	int length = 0;
 
 	while (*str++)
 		length++;
