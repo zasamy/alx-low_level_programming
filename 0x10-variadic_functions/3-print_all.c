@@ -33,17 +33,13 @@ void print_all(const char * const format, ...)
 				printf("%f%s", va_arg(list, double), space);
 				break;
 			case 's':
-				str = va_arg(list, char *);
-				if (!str || !*str)
-					str = "(nil)";
-				printf("%s%s", str, space);
+				ptr = va_arg(list, char *);
+				if (!ptr || !*ptr)
+					ptr = "(nil)";
+				printf("%s%s", ptr, space);
 				break;
 		}
 		i++;
 	}
 	printf("\n");
 }
-
-
-
-
