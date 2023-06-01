@@ -1,6 +1,22 @@
 #include "lists.h"
 
 /**
+ * _strlen - returns the length of a string
+ *
+ * @s: string input
+ *
+ * Return: lenght of string
+ */
+int _strlen(char *s)
+{
+	int count;
+
+	for (count = 0; *s != '\0'; s++)
+		++count;
+	return (count);
+}
+
+/**
  * add_node_end - adds a new node at the end of a linked list
  *
  * @head: a pointer to the head
