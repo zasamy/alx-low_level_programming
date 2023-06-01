@@ -1,9 +1,9 @@
 #include "lists.h"
 
-void _constructor(void) __attribute__ ((com¡nstructor));
+void _constructor(void) __attribute__ ((constructor));
 
 /**
- * constructor - function with constractor
+ * constructor - function with constructor
  *
  * Return: void
  */
