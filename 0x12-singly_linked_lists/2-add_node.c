@@ -24,6 +24,7 @@ int _strlen(char *s)
  *
  * Return: address of new element or NULL if it failed
  */
+
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_element = malloc(sizeof(list_t));
@@ -38,9 +39,9 @@ list_t *add_node(list_t **head, const char *str)
 			free(new_element);
 			return (NULL);
 		}
-		new_elemetn->len = _strlen(new_element->str);
+		new_element->len = _strlen(new_element->str);
 	}
-	new_element->head = *head;
+	new_element->next = *head;
 	*head = new_element;
 	return (new_element);
 }
