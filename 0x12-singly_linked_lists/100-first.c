@@ -5,6 +5,7 @@ void _constructor(void) __attribute__ ((constructor));
 /**
  * constructor - function with constructor
  *
+ * Description: print string
  * Return: void
  */
 void _constructor(void)
