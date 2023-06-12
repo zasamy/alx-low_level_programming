@@ -16,12 +16,12 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * create_file -  appends text at the end of a file
+ * append_text_to_file -  appends text at the end of a file
  * @filename: the name of the file to create
  * @text_content: string to add at the end of the file
  * Return: 1 on success, -1 on failure
  */
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int file;
 	ssize_t i = 0, len = _strlen(text_content);
